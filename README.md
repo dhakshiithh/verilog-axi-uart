@@ -1,28 +1,71 @@
-# ⚡ AXI4-Stream UART Implementation in Verilog
+# UART AXI4-Stream Interface | Verilog Project
 
-This project implements a **parameterizable 8-bit UART transmitter and receiver** with AXI4-Stream interfaces, enabling high-speed serial communication integration into FPGA designs.
-
----
-
-## 📂 Modules
-
-- `uart.v`: Top-level wrapper instantiating TX and RX modules
-- `uart_tx.v`: UART transmitter implementation
-- `uart_rx.v`: UART receiver implementation
+This is my implementation of an **8-bit UART IP core** with an AXI4-Stream interface in Verilog, including transmitter and receiver modules, tested using cocotb-based Python testbenches.
 
 ---
 
-## ⚙️ Features
+## ✨ Features
 
-- **AXI4-Stream interface** with `tdata`, `tvalid`, `tready` handshaking
-- Configurable **DATA_WIDTH** and prescaler-based baud rate control
-- Start and stop bit framing with framing and overrun error detection
-- Synthesizable clean Verilog design with cocotb testbenches
+- UART transmitter and receiver with **configurable data width (default 8 bits)**
+- Supports **runtime configurable baud rate** via prescaler input
+- Implements **start and stop bit framing logic**
+- AXI4-Stream compliant interface for integration with other IPs
+- Includes **functional testbenches** for both TX and RX
 
 ---
 
-## 🧪 Simulation Instructions
+## 📁 Folder Structure
 
-1. **Install dependencies**
-   ```bash
-   pip install cocotb cocotbext-axi pytest
+```
+rtl/        --> Verilog design files (uart.v, uart_tx.v, uart_rx.v)
+tb/         --> cocotb testbenches for transmitter and receiver
+```
+
+---
+
+## 🚀 Running Simulations
+
+### Prerequisites
+
+- Python with `cocotb`, `cocotb-test`, and `cocotbext-axi`
+- Icarus Verilog
+- GTKWave (for waveform viewing)
+
+### Steps
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/UART_AXI4.git
+cd UART_AXI4
+
+# (Optional) Create virtual environment
+python -m venv uartenv
+source uartenv/bin/activate
+
+# Install dependencies
+pip install cocotb cocotb-test cocotbext-axi
+
+# Set PYTHONPATH to tb folder
+export PYTHONPATH=tb
+
+# Run tests using pytest
+pytest tb/
+```
+
+> ✅ **Tip:** Use `gtkwave dump.vcd` to view waveform outputs for each test.
+
+---
+
+## 🎯 What I Learned
+
+- Designing AXI4-Stream compliant interfaces in Verilog
+- Implementing UART protocols with start/stop framing logic
+- Writing cocotb-based Python testbenches for IP verification
+- Debugging simulation waveforms to validate functionality
+
+---
+
+## 🙋‍♂️ About Me
+
+This is part of my digital design learning journey.  
+Feel free to reach out for feedback or suggestions!
