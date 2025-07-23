@@ -4,7 +4,7 @@ This is my implementation of an **8-bit UART IP core** with an AXI4-Stream inter
 
 ---
 
-## ✨ Features
+## Features
 
 - UART transmitter and receiver with **configurable data width (default 8 bits)**
 - Supports **runtime configurable baud rate** via prescaler input
@@ -14,7 +14,7 @@ This is my implementation of an **8-bit UART IP core** with an AXI4-Stream inter
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 rtl/        --> Verilog design files (uart.v, uart_tx.v, uart_rx.v)
@@ -23,7 +23,7 @@ tb/         --> cocotb testbenches for transmitter and receiver
 
 ---
 
-## 🚀 Running Simulations
+## Running Simulations
 
 ### Prerequisites
 
@@ -52,11 +52,11 @@ export PYTHONPATH=tb
 pytest tb/
 ```
 
-> ✅ **Tip:** Use `gtkwave dump.vcd` to view waveform outputs for each test.
+> **Note:** Use `gtkwave dump.vcd` to view waveform outputs for each test.
 
 ---
 
-## 🎯 What I Learned
+## Learning Objectives
 
 - Designing AXI4-Stream compliant interfaces in Verilog
 - Implementing UART protocols with start/stop framing logic
@@ -65,7 +65,8 @@ pytest tb/
 
 ---
 
-## 🙋‍♂️ About Me
+## Author
 
-This is part of my digital design learning journey.  
-Feel free to reach out for feedback or suggestions!
+- Name : Dhakshith Sureshkumar
+- Roll Number : 230359
+- B.Tech Electrical Engineering
