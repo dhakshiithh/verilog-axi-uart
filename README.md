@@ -69,4 +69,4 @@ pytest tb/
 
 - Name : Dhakshith Sureshkumar
 - Roll Number : 230359
-- B.Tech Electrical Engineering
+- B.Tech in Electrical Engineering
